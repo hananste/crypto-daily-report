@@ -7,7 +7,7 @@ class H(http.server.SimpleHTTPRequestHandler):
     def do_GET(s):
         p = s.path.split("?")[0]
         if p=="/": s.path="/index.html"
-        elif p!="/index.html" and not (p.startswith("/static/") or p.startswith("/data/")): return s.send_error(404)
+        elif p not in("/index.html","/manifest.webmanifest") and not (p.startswith("/static/") or p.startswith("/data/")): return s.send_error(404)
         super().do_GET()
     def do_POST(s): s.send_error(405)
     do_PUT = do_DELETE = do_POST

@@ -65,7 +65,7 @@ function render(r0){const r={...r0};for(const k of['btc','market','derivatives',
    b.levels.forEach(L=>s.createPriceLine({price:L.price,color:L.price<b.price?'#4ade80':'#f9a8d4',lineStyle:2,lineWidth:1,title:L.label}));
    const ma=chart.addLineSeries({color:'rgba(103,232,249,.6)',lineWidth:1,priceLineVisible:false,lastValueVisible:false});
    const cl=b.candles.map(c=>c.close);ma.setData(b.candles.slice(49).map((c,i)=>({time:c.time,value:cl.slice(i,i+50).reduce((a,x)=>a+x)/50})));
-   chart.timeScale().setVisibleLogicalRange({from:b.candles.length-120,to:b.candles.length+3});
+   chart.timeScale().setVisibleLogicalRange({from:b.candles.length-(innerWidth<600?60:120),to:b.candles.length+3});
    $('struct').innerHTML=`<b>Trend:</b> ${b.trend} <span class=k>(price vs SMA20 ${usd(b.sma20)} / SMA50 ${usd(b.sma50)} — cyan line; SMA200 ${usd(b.sma200)})</span><br><b>Support:</b> ${b.supports.map(x=>usd(x)).join(' · ')||'—'} &nbsp; <b>Resistance:</b> ${b.resistances.map(x=>usd(x)).join(' · ')||'—'} <span class=k>(daily swing pivots, 120d · ${b.pivots_live?'browser':'Action'})</span>`+upd(b);}
   // derivatives
   const d=r.derivatives;if(d.status!='ok')$('der').innerHTML=na(d);else{let lq;const L=d.liq||{};
@@ -81,7 +81,7 @@ function render(r0){const r={...r0};for(const k of['btc','market','derivatives',
   // market
   const m=r.market;if(m.status!='ok'){$('mkt').innerHTML=na(m);$('sec').innerHTML=na(m);}else{
    $('mkt').innerHTML=`<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px"><div><div class=k>Total market cap</div><div class=v>${big(m.total_mcap)} <span style="font-size:13px">${pct(m.mcap_change_24h,1)}</span></div></div><div><div class=k>BTC dominance</div><div class=v>${m.btc_dominance.toFixed(1)}%</div></div></div>
-   <table><tr><th class=l>#</th><th class=l>Coin</th><th>Price</th><th>24h</th><th>7d</th><th>Cap</th></tr>${m.top10.map(c=>`<tr><td class=l>${c.rank}</td><td class=l>${c.symbol} <span class=sym>${c.name}</span></td><td>${px(c.price)}</td><td>${pct(c.change_24h)}</td><td>${pct(c.change_7d)}</td><td>${big(c.mcap)}</td></tr>`).join('')}</table>`+upd(m);
+   <div class=tscroll><table><tr><th class=l>#</th><th class=l>Coin</th><th>Price</th><th>24h</th><th>7d</th><th>Cap</th></tr>${m.top10.map(c=>`<tr><td class=l>${c.rank}</td><td class=l>${c.symbol} <span class=sym>${c.name}</span></td><td>${px(c.price)}</td><td>${pct(c.change_24h)}</td><td>${pct(c.change_7d)}</td><td>${big(c.mcap)}</td></tr>`).join('')}</table></div>`+upd(m);
    const n=Math.max(m.sector_leaders.length,m.sector_laggards.length);let h='';for(let i=0;i<n;i++){const a=m.sector_leaders[i],z=m.sector_laggards[i];h+=`<span>${a?a.name:''}</span><b>${a?pct(a.change_24h,1):''}</b><span>${z?z.name:''}</span><b>${z?pct(z.change_24h,1):''}</b>`}
    $('sec').innerHTML=`<div class=sg>${h}</div><div class=k style="font-size:10.5px;margin-top:8px">CoinGecko categories &gt;$2B cap, 24h market-cap change</div>`+upd({status:'ok',fetched_ts:m.sectors_ts||m.fetched_ts,fetched:m.sectors_fetched||m.fetched});}
   $('foot').innerHTML='Sources: '+['btc','market','derivatives','flows','fng','calendar'].map(k=>`${k}: ${r[k].source} (${r[k].status}, ${r[k].fetched})`).join(' · ')+'. Not financial advice.';

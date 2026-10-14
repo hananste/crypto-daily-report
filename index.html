@@ -1,20 +1,23 @@
 <!doctype html><html><head><meta charset=utf-8><title>Daily Crypto & BTC Report</title>
-<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name=theme-color content="#0b0820"><meta name=apple-mobile-web-app-capable content=yes><meta name=mobile-web-app-capable content=yes>
+<meta name=apple-mobile-web-app-status-bar-style content=black-translucent><meta name=apple-mobile-web-app-title content="Crypto Report">
+<link rel=manifest href="manifest.webmanifest"><link rel=apple-touch-icon href="static/icons/apple-touch-icon.png"><link rel=icon href="static/icons/icon-192.png">
 <link rel=stylesheet href="static/style.css"><script src="static/vendor/lightweight-charts.standalone.production.js"></script></head>
 <body><div class=blob style="width:700px;height:700px;background:#7c3aed;left:-200px;top:-200px"></div><div class=blob style="width:640px;height:640px;background:#2563eb;left:45%;top:380px"></div><div class=blob style="width:520px;height:520px;background:#0d9488;right:-120px;top:-120px"></div><div class=blob style="width:400px;height:400px;background:#db2777;left:200px;bottom:-200px;opacity:.45"></div>
 <nav class=bar><div class=tabs><button class="tab on" data-v=pub>Market</button><button class=tab data-v=priv>Private</button></div>
-<div class=k id=gen></div><label class=k>Report <select id=pick></select></label></nav>
+<div class=k id=gen></div><label class="k pk">Report <select id=pick></select></label></nav>
 <div id=pub class=wrap>
- <div class=col><div class=g><div class=t id=dt></div><h1>Daily Crypto &amp;<br><span class=grad>BTC Report</span></h1></div>
-  <div class=g style="flex:1"><div class=t>What changed since <span id=cmp>yesterday</span></div><div id=chg></div></div>
-  <div class=g><div class=t>Fear &amp; Greed</div><div id=fng></div></div></div>
- <div class=col><div class="g" id=btcbox><div class=hdr><div><div class=t style="margin:0">Bitcoin · BTC/USD · 1D</div><div class=big id=px>—</div></div><div id=pch style="padding-bottom:8px"></div><div class=k id=hl style="margin-left:auto;padding-bottom:8px"></div></div>
+ <div class=col><div class="g o0"><div class=t id=dt></div><h1>Daily Crypto &amp;<br><span class=grad>BTC Report</span></h1></div>
+  <div class="g o1" style="flex:1"><div class=t>What changed since <span id=cmp>yesterday</span></div><div id=chg></div></div>
+  <div class="g o3"><div class=t>Fear &amp; Greed</div><div id=fng></div></div></div>
+ <div class=col><div class="g o2" id=btcbox><div class=hdr><div><div class=t style="margin:0">Bitcoin · BTC/USD · 1D</div><div class=big id=px>—</div></div><div id=pch style="padding-bottom:8px"></div><div class=k id=hl style="margin-left:auto;padding-bottom:8px"></div></div>
    <div id=chart></div><div class=note id=struct></div></div>
-  <div class=row3><div class=g><div class=t>Derivatives</div><div id=der></div></div>
-   <div class=g><div class=t>Flows</div><div id=flo></div></div>
-   <div class=g><div class=t>Macro calendar · ET</div><div id=cal></div></div></div></div>
- <div class=col><div class=g style="flex:1"><div class=t>Market snapshot</div><div id=mkt></div></div>
-  <div class=g><div class=t>Sector leaders / laggards</div><div id=sec></div></div></div>
+  <div class=row3><div class="g o5"><div class=t>Derivatives</div><div id=der></div></div>
+   <div class="g o6"><div class=t>Flows</div><div id=flo></div></div>
+   <div class="g o7"><div class=t>Macro calendar · ET</div><div id=cal></div></div></div></div>
+ <div class=col><div class="g o4" style="flex:1"><div class=t>Market snapshot</div><div id=mkt></div></div>
+  <div class="g o4b"><div class=t>Sector leaders / laggards</div><div id=sec></div></div></div>
 </div>
 <div id=priv class=wrap style="display:none"><div class=g style="grid-column:1/-1;display:grid;place-items:center;text-align:center"><div><h1>Private</h1><p class=k style="margin-top:10px;font-size:15px">Positions, P&amp;L and orders will live here.<br>Not connected yet — this public build pulls no account data.</p></div></div></div>
 <div class=foot id=foot></div>
