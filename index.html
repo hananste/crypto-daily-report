@@ -3,7 +3,7 @@
 <meta name=theme-color content="#0b0820"><meta name=apple-mobile-web-app-capable content=yes><meta name=mobile-web-app-capable content=yes>
 <meta name=apple-mobile-web-app-status-bar-style content=black-translucent><meta name=apple-mobile-web-app-title content="Crypto Report">
 <link rel=manifest href="manifest.webmanifest"><link rel=apple-touch-icon href="static/icons/apple-touch-icon.png"><link rel=icon href="static/icons/icon-192.png">
-<link rel=stylesheet href="static/style.css"><script src="static/vendor/lightweight-charts.standalone.production.js"></script></head>
+<link rel=stylesheet href="static/style.css"></head>
 <body><div class=blob style="width:700px;height:700px;background:#7c3aed;left:-200px;top:-200px"></div><div class=blob style="width:640px;height:640px;background:#2563eb;left:45%;top:380px"></div><div class=blob style="width:520px;height:520px;background:#0d9488;right:-120px;top:-120px"></div><div class=blob style="width:400px;height:400px;background:#db2777;left:200px;bottom:-200px;opacity:.45"></div>
 <nav class=bar><div class=tabs><button class="tab on" data-v=pub>Market</button><button class=tab data-v=priv>Private</button></div>
 <div class=k id=gen></div><label class="k pk">Report <select id=pick></select></label></nav>
@@ -11,11 +11,17 @@
  <div class=col><div class="g o0"><div class=t id=dt></div><h1>Daily Crypto &amp;<br><span class=grad>BTC Report</span></h1></div>
   <div class="g o1" style="flex:1"><div class=t>What changed since <span id=cmp>yesterday</span></div><div id=chg></div></div>
   <div class="g o3"><div class=t>Fear &amp; Greed</div><div id=fng></div></div></div>
- <div class=col><div class="g o2" id=btcbox><div class=hdr><div><div class=t style="margin:0">Bitcoin · BTC/USD · 1D</div><div class=big id=px>—</div></div><div id=pch style="padding-bottom:8px"></div><div class=k id=hl style="margin-left:auto;padding-bottom:8px"></div></div>
-   <div id=chart></div><div class=note id=struct></div></div>
+ <div class=col><div class="g o2" id=btcbox><div class=hdr><div><div class=t style="margin:0">Bitcoin · BTC/USD</div><div class=big id=px>—</div></div><div id=pch style="padding-bottom:8px"></div><div class=k id=hl style="margin-left:auto;padding-bottom:8px"></div></div>
+   <div id=lvls class=lvls></div>
+   <div class="tradingview-widget-container" id=tvbox><div class="tradingview-widget-container__widget" style="height:100%;width:100%"></div>
+   <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+   {"autosize":true,"symbol":"CRYPTO:BTCUSD","interval":"240","timezone":"America/Chicago","theme":"dark","style":"1","locale":"en",
+    "backgroundColor":"rgba(16,12,40,0.0)","gridColor":"rgba(255,255,255,0.06)","allow_symbol_change":true,"hide_side_toolbar":false,
+    "hide_top_toolbar":false,"withdateranges":true,"details":false,"calendar":false,"save_image":true,"support_host":"https://www.tradingview.com"}
+   </script></div><div class=note id=struct></div></div>
   <div class=row3><div class="g o5"><div class=t>Derivatives</div><div id=der></div></div>
    <div class="g o6"><div class=t>Flows</div><div id=flo></div></div>
-   <div class="g o7"><div class=t>Macro calendar · ET</div><div id=cal></div></div></div></div>
+   <div class="g o7"><div class=t>Macro calendar · your time</div><div id=cal></div></div></div></div>
  <div class=col><div class="g o4" style="flex:1"><div class=t>Market snapshot</div><div id=mkt></div></div>
   <div class="g o4b"><div class=t>Sector leaders / laggards</div><div id=sec></div></div></div>
 </div>

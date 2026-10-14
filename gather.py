@@ -3,12 +3,13 @@
 import json, os, sys, time, urllib.request, glob
 from datetime import datetime, timezone, timedelta
 try:
-    from zoneinfo import ZoneInfo; ET = ZoneInfo("America/New_York")
+    from zoneinfo import ZoneInfo; ET = ZoneInfo("America/Chicago")
 except Exception:
-    ET = timezone(timedelta(hours=-4))
+    ET = timezone(timedelta(hours=-5))
 HERE = os.path.dirname(os.path.abspath(__file__)); DATA = os.path.join(HERE, "data")
 LEVELS = [{"price":83000,"label":"Support 83k"},{"price":92000,"label":"Resistance 92k"},{"price":95000,"label":"Resistance 95k"}]
-def now_et(): return datetime.now(ET).strftime("%Y-%m-%d %H:%M ET")
+STABLE = {"USDT","USDC","DAI","USDE","FDUSD","TUSD","PYUSD","USDS","USD1","BUSD","FRAX","USDD","USDP","GUSD","LUSD","USDG","RLUSD","USDTB","USD0","CRVUSD","GHO","EURC","XAUT","PAXG"}
+def now_et(): return datetime.now(ET).strftime("%Y-%m-%d %H:%M CT")
 def get(url):
     req = urllib.request.Request(url, headers={"User-Agent":"Mozilla/5.0 crypto-report","Accept":"application/json"})
     with urllib.request.urlopen(req, timeout=25) as r: return json.loads(r.read().decode())
@@ -44,7 +45,13 @@ def btc():
             "levels":LEVELS,"candles":candles[-180:]}
 def market():
     g = get("https://api.coingecko.com/api/v3/global")["data"]
-    top = get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&price_change_percentage=24h,7d")
+    top = get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=30&page=1&price_change_percentage=24h,7d")
+    try: sids = {c["id"] for c in get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&category=stablecoins&per_page=100&page=1")}
+    except Exception: sids = set()
+    def stable(c):
+        s = c["symbol"].upper()
+        return s in STABLE or c["id"] in sids or ((s.startswith("USD") or s.endswith("USD")) and abs((c["current_price"] or 0)-1) < 0.03)
+    top = [c for c in top if not stable(c)][:10]
     cats = get("https://api.coingecko.com/api/v3/coins/categories")
     cats = [c for c in cats if (c.get("market_cap") or 0) > 2e9 and c.get("market_cap_change_24h") is not None
             and not any(w in c["name"] for w in ("Stablecoin","Dollar","USD","Wrapped","Bridged","Ecosystem"))]
@@ -52,9 +59,9 @@ def market():
     sec = lambda c: {"name":c["name"],"change_24h":c["market_cap_change_24h"]}
     return {"total_mcap":g["total_market_cap"]["usd"],"mcap_change_24h":g.get("market_cap_change_percentage_24h_usd"),
             "btc_dominance":g["market_cap_percentage"]["btc"],"eth_dominance":g["market_cap_percentage"].get("eth"),
-            "top10":[{"rank":c["market_cap_rank"],"symbol":c["symbol"].upper(),"name":c["name"],"price":c["current_price"],
+            "top10":[{"rank":i+1,"mcap_rank":c["market_cap_rank"],"symbol":c["symbol"].upper(),"name":c["name"],"price":c["current_price"],
                       "change_24h":c.get("price_change_percentage_24h_in_currency"),"change_7d":c.get("price_change_percentage_7d_in_currency"),
-                      "mcap":c["market_cap"]} for c in top],
+                      "mcap":c["market_cap"]} for i,c in enumerate(top)],
             "sector_leaders":[sec(c) for c in cats[::-1][:4]],"sector_laggards":[sec(c) for c in cats[:4]]}
 def derivs():
     out = {}
@@ -84,7 +91,7 @@ def derivs():
             oldest = min(oldest or 1e20, int(d["ts"])); usd = float(d["sz"])*0.01*float(d["bkPx"]); n += 1  # ctVal 0.01 BTC
             if d["posSide"]=="long": lng += usd
             else: sht += usd
-        out["liq"] = {"long_usd":lng,"short_usd":sht,"count":n,"since":datetime.fromtimestamp((oldest or 0)/1000,ET).strftime("%b %d %H:%M ET") if oldest else None,
+        out["liq"] = {"long_usd":lng,"short_usd":sht,"count":n,"since":datetime.fromtimestamp((oldest or 0)/1000,ET).strftime("%b %d %H:%M CT") if oldest else None,
                       "scope":"OKX BTC-USDT perp only, most recent liquidation orders the free API returns (partial sample, not market-wide)"}
     except Exception as e:
         out["liq"] = {"status":"unavailable","error":str(e)[:200]}
