@@ -24,9 +24,10 @@ async function init(){
   LIVE=true;await load('data/latest.json');setInterval(()=>{if(LIVE)tick()},60000);
 }
 async function load(u){try{CUR=await (await fetch(u+'?t='+Date.now())).json();}catch(e){CUR={date:new Date().toISOString().slice(0,10),generated:'—',changes:[{dir:'flat',text:'Report JSON unavailable'}],btc:{},market:{},derivatives:{},flows:{},fng:{},calendar:{status:'unavailable'}}}render(CUR);if(LIVE)tick();}
-const STABLE=new Set(['USDT','USDC','DAI','USDE','FDUSD','TUSD','PYUSD','USDS','USD1','BUSD','FRAX','USDD','USDP','GUSD','LUSD','USDG','RLUSD','USDTB','USD0','CRVUSD','GHO','EURC','XAUT','PAXG']);
+const STABLE=new Set(['USDT','USDC','DAI','USDE','FDUSD','TUSD','PYUSD','USDS','USD1','BUSD','FRAX','USDD','USDP','GUSD','LUSD','USDG','RLUSD','USDTB','USD0','CRVUSD','GHO','EURC','XAUT','PAXG','FIGR_HELOC']);
 let STABLE_IDS=null;
-const isStable=c=>STABLE.has(c.symbol.toUpperCase())||(STABLE_IDS&&STABLE_IDS.has(c.id))||/^usd|usd$/i.test(c.symbol)&&Math.abs(c.current_price-1)<0.03;
+const pegged=c=>{const p=(c.sparkline_in_7d||{}).price||[];return p.length>0&&p.every(x=>x>=0.95&&x<=1.05)};
+const isStable=c=>pegged(c)||STABLE.has(c.symbol.toUpperCase())||(STABLE_IDS&&STABLE_IDS.has(c.id))||/^usd|usd$/i.test(c.symbol)&&Math.abs(c.current_price-1)<0.03;
 const J=async u=>{const x=await fetch(u);if(!x.ok)throw new Error('HTTP '+x.status);return x.json()};
 const nowS=()=>Math.floor(Date.now()/1000),nowET=()=>dtFmt(Date.now()/1000);
 const sma=(a,n)=>a.length>=n?a.slice(-n).reduce((x,y)=>x+y)/n:null;
@@ -43,7 +44,7 @@ async function tick(){
        liq={long_usd:l,short_usd:sh,count:n,since:n?dtFmt(old/1000):null,scope:'OKX BTC-USDT perp only, most recent liquidation orders the free API returns (partial sample, not market-wide)'}}
      return{...live,source:'OKX public API (browser)',funding_rate_pct:+f.data[0].fundingRate*100,funding_interval:'8h (OKX BTC-USDT perp)',oi_usd:+oi.data[0].oiUsd,oi_change_pct:null,oi_scope:'OKX BTC-USDT perp, live',liq}},
    fng:async()=>{const d=(await J('https://api.alternative.me/fng/?limit=8')).data;return{...live,source:'alternative.me',value:+d[0].value,label:d[0].value_classification,yesterday:+d[1].value,week_ago:d[7]?+d[7].value:null}},
-   market:async()=>{const G='https://api.coingecko.com/api/v3/';const[g,top]=await Promise.all([J(G+'global'),J(G+'coins/markets?vs_currency=usd&order=market_cap_desc&per_page=30&page=1&price_change_percentage=24h,7d')]);
+   market:async()=>{const G='https://api.coingecko.com/api/v3/';const[g,top]=await Promise.all([J(G+'global'),J(G+'coins/markets?vs_currency=usd&order=market_cap_desc&per_page=30&page=1&sparkline=true&price_change_percentage=24h,7d')]);
      if(!STABLE_IDS){try{STABLE_IDS=new Set((await J(G+'coins/markets?vs_currency=usd&category=stablecoins&per_page=100&page=1')).map(c=>c.id))}catch(e){}}
      const top10=top.filter(c=>!isStable(c)).slice(0,10);const p=base.market&&base.market.status=='ok'?base.market:{};
      return{...p,...live,source:'CoinGecko free API',total_mcap:g.data.total_market_cap.usd,mcap_change_24h:g.data.market_cap_change_percentage_24h_usd,btc_dominance:g.data.market_cap_percentage.btc,

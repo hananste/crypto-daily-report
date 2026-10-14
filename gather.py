@@ -8,7 +8,7 @@ except Exception:
     ET = timezone(timedelta(hours=-5))
 HERE = os.path.dirname(os.path.abspath(__file__)); DATA = os.path.join(HERE, "data")
 LEVELS = [{"price":83000,"label":"Support 83k"},{"price":92000,"label":"Resistance 92k"},{"price":95000,"label":"Resistance 95k"}]
-STABLE = {"USDT","USDC","DAI","USDE","FDUSD","TUSD","PYUSD","USDS","USD1","BUSD","FRAX","USDD","USDP","GUSD","LUSD","USDG","RLUSD","USDTB","USD0","CRVUSD","GHO","EURC","XAUT","PAXG"}
+STABLE = {"USDT","USDC","DAI","USDE","FDUSD","TUSD","PYUSD","USDS","USD1","BUSD","FRAX","USDD","USDP","GUSD","LUSD","USDG","RLUSD","USDTB","USD0","CRVUSD","GHO","EURC","XAUT","PAXG","FIGR_HELOC"}
 def now_et(): return datetime.now(ET).strftime("%Y-%m-%d %H:%M CT")
 def get(url):
     req = urllib.request.Request(url, headers={"User-Agent":"Mozilla/5.0 crypto-report","Accept":"application/json"})
@@ -45,11 +45,13 @@ def btc():
             "levels":LEVELS,"candles":candles[-180:]}
 def market():
     g = get("https://api.coingecko.com/api/v3/global")["data"]
-    top = get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=30&page=1&price_change_percentage=24h,7d")
+    top = get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=30&page=1&sparkline=true&price_change_percentage=24h,7d")
     try: sids = {c["id"] for c in get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&category=stablecoins&per_page=100&page=1")}
     except Exception: sids = set()
     def stable(c):
         s = c["symbol"].upper()
+        sp = (c.get("sparkline_in_7d") or {}).get("price") or []
+        if sp and all(0.95 <= x <= 1.05 for x in sp): return True
         return s in STABLE or c["id"] in sids or ((s.startswith("USD") or s.endswith("USD")) and abs((c["current_price"] or 0)-1) < 0.03)
     top = [c for c in top if not stable(c)][:10]
     cats = get("https://api.coingecko.com/api/v3/coins/categories")
