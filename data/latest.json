@@ -1,22 +1,22 @@
 {
  "date": "2026-10-28",
- "generated": "2026-10-28 08:37 CT",
- "generated_ts": 1793194655,
+ "generated": "2026-10-28 09:30 CT",
+ "generated_ts": 1793197822,
  "kind": "snapshot",
  "btc": {
-  "price": 80694.0,
-  "change_24h": 0.9849834050688733,
-  "change_7d": -3.9639191680252983,
+  "price": 80432.82,
+  "change_24h": 0.2604211463167694,
+  "change_7d": -4.274756449504647,
   "high_24h": 81694.39,
-  "low_24h": 79743.82,
-  "sma20": 81797.015,
-  "sma50": 81871.8616,
-  "sma200": 73061.4633,
+  "low_24h": 80097.04,
+  "sma20": 81789.8015,
+  "sma50": 81868.9762,
+  "sma200": 73060.74195,
   "trend": "Downtrend",
   "supports": [
-   80564.57,
    80314.7,
-   79676.02
+   79676.02,
+   79107
   ],
   "resistances": [
    81265.3,
@@ -1295,186 +1295,186 @@
     "time": 1793145600,
     "open": 80799.5,
     "high": 81694.39,
-    "low": 80440.85,
-    "close": 80562.21
+    "low": 80270.68,
+    "close": 80417.94
    }
   ],
   "status": "ok",
-  "fetched": "2026-10-28 08:37 CT",
-  "fetched_ts": 1793194655,
+  "fetched": "2026-10-28 09:30 CT",
+  "fetched_ts": 1793197822,
   "source": "Coinbase Exchange public API"
  },
  "market": {
-  "total_mcap": 2722510083604.4746,
-  "mcap_change_24h": -2.162275731910406,
-  "btc_dominance": 59.440899450061714,
-  "eth_dominance": 10.47658597375595,
+  "total_mcap": 2711873688880.4507,
+  "mcap_change_24h": -2.097095987925193,
+  "btc_dominance": 59.484505441875456,
+  "eth_dominance": 10.448352214499119,
   "top10": [
    {
     "rank": 1,
     "mcap_rank": 1,
     "symbol": "BTC",
     "name": "Bitcoin",
-    "price": 80589,
-    "change_24h": 0.68613,
-    "change_7d": -3.326,
-    "mcap": 1620218053430
+    "price": 80452,
+    "change_24h": 0.3786,
+    "change_7d": -3.383,
+    "mcap": 1617092467390
    },
    {
     "rank": 2,
     "mcap_rank": 2,
     "symbol": "ETH",
     "name": "Ethereum",
-    "price": 2336.51,
-    "change_24h": 0.52064,
-    "change_7d": -5.2543,
-    "mcap": 285451730401
+    "price": 2326.58,
+    "change_24h": 0.13242,
+    "change_7d": -5.4585,
+    "mcap": 284134193077
    },
    {
     "rank": 3,
     "mcap_rank": 4,
     "symbol": "BNB",
     "name": "BNB",
-    "price": 751.69,
-    "change_24h": 1.39873,
-    "change_7d": 1.0813,
-    "mcap": 98855526757
+    "price": 747.22,
+    "change_24h": 0.62514,
+    "change_7d": 0.4881,
+    "mcap": 98240044721
    },
    {
     "rank": 4,
     "mcap_rank": 5,
     "symbol": "XRP",
     "name": "XRP",
-    "price": 1.32,
-    "change_24h": 0.43247,
-    "change_7d": -2.9761,
-    "mcap": 83403978150
+    "price": 1.31,
+    "change_24h": -0.28016,
+    "change_7d": -2.9629,
+    "mcap": 83008195855
    },
    {
     "rank": 5,
     "mcap_rank": 7,
     "symbol": "SOL",
     "name": "Solana",
-    "price": 101.26,
-    "change_24h": 1.03283,
-    "change_7d": -5.0017,
-    "mcap": 59738334356
+    "price": 100.48,
+    "change_24h": 0.18218,
+    "change_7d": -5.5402,
+    "mcap": 59257778492
    },
    {
     "rank": 6,
     "mcap_rank": 8,
     "symbol": "TRX",
     "name": "TRON",
-    "price": 0.331021,
-    "change_24h": 0.96194,
-    "change_7d": 0.2006,
-    "mcap": 31452874283
+    "price": 0.331178,
+    "change_24h": 1.0831,
+    "change_7d": -0.033,
+    "mcap": 31470539130
    },
    {
     "rank": 7,
     "mcap_rank": 10,
     "symbol": "ZEC",
     "name": "Zcash",
-    "price": 1285.5,
-    "change_24h": 1.61789,
-    "change_7d": -0.1561,
-    "mcap": 21867055075
+    "price": 1271.54,
+    "change_24h": -0.26463,
+    "change_7d": -1.0549,
+    "mcap": 21616515067
    },
    {
     "rank": 8,
     "mcap_rank": 11,
     "symbol": "HYPE",
     "name": "Hyperliquid",
-    "price": 80.15,
-    "change_24h": 1.57643,
-    "change_7d": -1.1674,
-    "mcap": 19188989757
+    "price": 79.69,
+    "change_24h": 0.91621,
+    "change_7d": -1.8239,
+    "mcap": 19064519595
    },
    {
     "rank": 9,
     "mcap_rank": 12,
     "symbol": "DOGE",
     "name": "Dogecoin",
-    "price": 0.079024,
-    "change_24h": 2.0948,
-    "change_7d": -3.3889,
-    "mcap": 12368198714
+    "price": 0.078638,
+    "change_24h": 1.18884,
+    "change_7d": -3.909,
+    "mcap": 12303749697
    },
    {
     "rank": 10,
     "mcap_rank": 13,
     "symbol": "XMR",
     "name": "Monero",
-    "price": 600.43,
-    "change_24h": 1.04116,
-    "change_7d": -0.4078,
-    "mcap": 11302167219
+    "price": 595.73,
+    "change_24h": 1.19845,
+    "change_7d": 0.6352,
+    "mcap": 11213337369
    }
   ],
   "sector_leaders": [
    {
     "name": "The Boy\u2019s Club",
-    "change_24h": 10.435461177823745
+    "change_24h": 9.779025756327894
    },
    {
     "name": "Frog-Themed",
-    "change_24h": 9.977958903382097
+    "change_24h": 9.386609204072311
    },
    {
     "name": "Derivatives",
-    "change_24h": 8.16746915796328
+    "change_24h": 7.760688567882401
    },
    {
     "name": "Perpetuals",
-    "change_24h": 6.960149251391226
+    "change_24h": 6.540040429848237
    }
   ],
   "sector_laggards": [
    {
     "name": "AI Applications",
-    "change_24h": -10.61418695631068
+    "change_24h": -10.951569849983175
    },
    {
     "name": "Binance Wallet IDO",
-    "change_24h": -9.087216572372114
+    "change_24h": -9.814005487915779
    },
    {
     "name": "Prediction Markets",
-    "change_24h": -3.6330805843531238
+    "change_24h": -3.3205226277292303
    },
    {
     "name": "Gambling (GambleFi)",
-    "change_24h": -3.1578962460742392
+    "change_24h": -2.858451199736005
    }
   ],
   "status": "ok",
-  "fetched": "2026-10-28 08:37 CT",
-  "fetched_ts": 1793194656,
+  "fetched": "2026-10-28 09:30 CT",
+  "fetched_ts": 1793197822,
   "source": "CoinGecko free API"
  },
  "derivatives": {
   "fallback_reason": "Binance: HTTP Error 451: ; Bybit: HTTP Error 403: Forbidden",
   "venue": "OKX",
-  "funding_rate_pct": 0.00716015468409,
+  "funding_rate_pct": 0.00616078580124,
   "funding_interval": "8h (OKX BTC-USDT perp)",
   "oi_usd": 3513205239.6089,
   "oi_change_pct": 0.9071242506546673,
   "oi_scope": "OKX all BTC contracts, daily",
   "liq": {
-   "long_usd": 2045597.5088299997,
-   "short_usd": 0.0,
+   "long_usd": 726813.1027800003,
+   "short_usd": 412.13838,
    "count": 100,
-   "since": "Oct 28 07:14 CT",
+   "since": "Oct 28 08:24 CT",
    "scope": "OKX BTC-USDT perp only, most recent liquidation orders the free API returns (partial sample, not market-wide)"
   },
   "status": "ok",
-  "fetched": "2026-10-28 08:37 CT",
-  "fetched_ts": 1793194657,
+  "fetched": "2026-10-28 09:30 CT",
+  "fetched_ts": 1793197824,
   "source": "OKX public API"
  },
  "flows": {
-  "stablecoin_supply": 301466522415.71,
-  "stablecoin_change_7d": -2072003261.289978,
+  "stablecoin_supply": 301475069971.83,
+  "stablecoin_change_7d": -2063455705.169983,
   "stablecoin_series": [
    {
     "time": 1790640000,
@@ -1594,7 +1594,7 @@
    },
    {
     "time": 1793145600,
-    "value": 301466522415.71
+    "value": 301475069971.83
    }
   ],
   "etf": {
@@ -1602,8 +1602,8 @@
    "reason": "No free, key-less, reliable source for daily spot BTC ETF flows (Farside blocks scraping; others need keys)."
   },
   "status": "ok",
-  "fetched": "2026-10-28 08:37 CT",
-  "fetched_ts": 1793194657,
+  "fetched": "2026-10-28 09:30 CT",
+  "fetched_ts": 1793197824,
   "source": "DefiLlama stablecoins API"
  },
  "fng": {
@@ -1612,8 +1612,8 @@
   "yesterday": 48,
   "week_ago": 63,
   "status": "ok",
-  "fetched": "2026-10-28 08:37 CT",
-  "fetched_ts": 1793194657,
+  "fetched": "2026-10-28 09:30 CT",
+  "fetched_ts": 1793197824,
   "source": "alternative.me"
  },
  "calendar": {
@@ -1635,18 +1635,18 @@
   ],
   "note": "Hand-maintained. date/time are ET as published; 'utc' is what the site displays (converted to viewer's local time). Add CPI/jobs dates from bls.gov/schedule; only confirmed dates belong here.",
   "status": "ok",
-  "fetched": "2026-10-28 08:37 CT",
-  "fetched_ts": 1793194657,
+  "fetched": "2026-10-28 09:30 CT",
+  "fetched_ts": 1793197824,
   "source": "hand-maintained macro_calendar.json"
  },
  "changes": [
   {
    "dir": "up",
-   "text": "BTC $80,694, +1.21% vs last report ($79,733)"
+   "text": "BTC $80,433, +0.88% vs last report ($79,733)"
   },
   {
    "dir": "up",
-   "text": "Total market cap +2.23%; BTC dominance -0.57 pts to 59.4%"
+   "text": "Total market cap +1.84%; BTC dominance -0.53 pts to 59.5%"
   },
   {
    "dir": "up",
@@ -1654,11 +1654,11 @@
   },
   {
    "dir": "flat",
-   "text": "Funding +0.0100% \u2192 +0.0072%"
+   "text": "Funding +0.0100% \u2192 +0.0062%"
   },
   {
    "dir": "dn",
-   "text": "Stablecoin supply -$84M since last report"
+   "text": "Stablecoin supply -$76M since last report"
   }
  ],
  "compared_to": "2026-10-27"
