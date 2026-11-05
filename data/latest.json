@@ -1,17 +1,17 @@
 {
  "date": "2026-11-05",
- "generated": "2026-11-05 05:44 CT",
- "generated_ts": 1793879085,
- "kind": "snapshot",
+ "generated": "2026-11-05 05:47 CT",
+ "generated_ts": 1793879248,
+ "kind": "daily",
  "btc": {
-  "price": 80273.19,
-  "change_24h": 2.4237364562208707,
-  "change_7d": 3.2050005444821394,
+  "price": 80270.44,
+  "change_24h": 2.4202276225087083,
+  "change_7d": 3.2014649462145606,
   "high_24h": 81130.79,
   "low_24h": 77897.7,
-  "sma20": 80137.62299999999,
-  "sma50": 82071.7074,
-  "sma200": 73211.2157,
+  "sma20": 80138.61850000001,
+  "sma50": 82072.1056,
+  "sma200": 73211.31525,
   "trend": "Mixed / range",
   "supports": [
    79676.02,
@@ -1296,49 +1296,49 @@
     "open": 80428.3,
     "high": 80843.85,
     "low": 80115.36,
-    "close": 80246.67
+    "close": 80266.58
    }
   ],
   "status": "ok",
-  "fetched": "2026-11-05 05:44 CT",
-  "fetched_ts": 1793879085,
+  "fetched": "2026-11-05 05:47 CT",
+  "fetched_ts": 1793879248,
   "source": "Coinbase Exchange public API"
  },
  "market": {
-  "total_mcap": 2683067685989.103,
-  "mcap_change_24h": -1.5654981420200516,
-  "btc_dominance": 60.090896389230885,
-  "eth_dominance": 11.000409799693958,
+  "total_mcap": 2683554615616.957,
+  "mcap_change_24h": -1.5525699495837562,
+  "btc_dominance": 60.101500937495864,
+  "eth_dominance": 10.999021881849638,
   "top10": [
    {
     "rank": 1,
     "mcap_rank": 1,
     "symbol": "BTC",
     "name": "Bitcoin",
-    "price": 80296,
-    "change_24h": 2.19831,
+    "price": 80302,
+    "change_24h": 2.16244,
     "change_7d": 0.1238,
-    "mcap": 1614380739828
+    "mcap": 1614526375070
    },
    {
     "rank": 2,
     "mcap_rank": 2,
     "symbol": "ETH",
     "name": "Ethereum",
-    "price": 2417.88,
-    "change_24h": 3.67477,
+    "price": 2418.14,
+    "change_24h": 3.57542,
     "change_7d": 4.1901,
-    "mcap": 295445966620
+    "mcap": 295486374405
    },
    {
     "rank": 3,
     "mcap_rank": 4,
     "symbol": "BNB",
     "name": "BNB",
-    "price": 716.18,
-    "change_24h": 1.94385,
+    "price": 716.17,
+    "change_24h": 1.91379,
     "change_7d": -4.4176,
-    "mcap": 94185978057
+    "mcap": 94188129713
    },
    {
     "rank": 4,
@@ -1346,9 +1346,9 @@
     "symbol": "XRP",
     "name": "XRP",
     "price": 1.32,
-    "change_24h": 2.12972,
+    "change_24h": 2.01721,
     "change_7d": 2.0577,
-    "mcap": 83639566688
+    "mcap": 83620859973
    },
    {
     "rank": 5,
@@ -1356,59 +1356,59 @@
     "symbol": "SOL",
     "name": "Solana",
     "price": 96.42,
-    "change_24h": 2.75077,
+    "change_24h": 2.61524,
     "change_7d": -3.648,
-    "mcap": 56914632642
+    "mcap": 56915940806
    },
    {
     "rank": 6,
     "mcap_rank": 8,
     "symbol": "TRX",
     "name": "TRON",
-    "price": 0.318719,
-    "change_24h": -0.32615,
+    "price": 0.318667,
+    "change_24h": -0.342,
     "change_7d": -3.8441,
-    "mcap": 30286708545
+    "mcap": 30282894713
    },
    {
     "rank": 7,
     "mcap_rank": 10,
     "symbol": "ZEC",
     "name": "Zcash",
-    "price": 1317.07,
-    "change_24h": 0.61988,
+    "price": 1316.39,
+    "change_24h": 0.48251,
     "change_7d": 5.1586,
-    "mcap": 22422645731
+    "mcap": 22416170037
    },
    {
     "rank": 8,
     "mcap_rank": 11,
     "symbol": "HYPE",
     "name": "Hyperliquid",
-    "price": 82.25,
-    "change_24h": -5.34209,
+    "price": 82.19,
+    "change_24h": -5.4057,
     "change_7d": 3.7728,
-    "mcap": 19691909237
+    "mcap": 19675012161
    },
    {
     "rank": 9,
     "mcap_rank": 12,
     "symbol": "DOGE",
     "name": "Dogecoin",
-    "price": 0.076848,
-    "change_24h": 1.90342,
+    "price": 0.076844,
+    "change_24h": 1.79861,
     "change_7d": -1.7485,
-    "mcap": 12035763952
+    "mcap": 12036196962
    },
    {
     "rank": 10,
     "mcap_rank": 13,
     "symbol": "XMR",
     "name": "Monero",
-    "price": 635.82,
-    "change_24h": -0.46921,
+    "price": 635.9,
+    "change_24h": -0.81241,
     "change_7d": 6.4598,
-    "mcap": 11970656805
+    "mcap": 11971215863
    }
   ],
   "sector_leaders": [
@@ -1448,8 +1448,8 @@
    }
   ],
   "status": "ok",
-  "fetched": "2026-11-05 05:44 CT",
-  "fetched_ts": 1793879085,
+  "fetched": "2026-11-05 05:47 CT",
+  "fetched_ts": 1793879249,
   "source": "CoinGecko free API"
  },
  "derivatives": {
@@ -1468,8 +1468,8 @@
    "scope": "OKX BTC-USDT perp only, most recent liquidation orders the free API returns (partial sample, not market-wide)"
   },
   "status": "ok",
-  "fetched": "2026-11-05 05:44 CT",
-  "fetched_ts": 1793879086,
+  "fetched": "2026-11-05 05:47 CT",
+  "fetched_ts": 1793879249,
   "source": "OKX public API"
  },
  "flows": {
@@ -1602,8 +1602,8 @@
    "reason": "No free, key-less, reliable source for daily spot BTC ETF flows (Farside blocks scraping; others need keys)."
   },
   "status": "ok",
-  "fetched": "2026-11-05 05:44 CT",
-  "fetched_ts": 1793879086,
+  "fetched": "2026-11-05 05:47 CT",
+  "fetched_ts": 1793879250,
   "source": "DefiLlama stablecoins API"
  },
  "fng": {
@@ -1612,8 +1612,8 @@
   "yesterday": 34,
   "week_ago": 51,
   "status": "ok",
-  "fetched": "2026-11-05 05:44 CT",
-  "fetched_ts": 1793879087,
+  "fetched": "2026-11-05 05:47 CT",
+  "fetched_ts": 1793879250,
   "source": "alternative.me"
  },
  "calendar": {
@@ -1628,14 +1628,14 @@
   ],
   "note": "Hand-maintained. date/time are ET as published; 'utc' is what the site displays (converted to viewer's local time). Add CPI/jobs dates from bls.gov/schedule; only confirmed dates belong here.",
   "status": "ok",
-  "fetched": "2026-11-05 05:44 CT",
-  "fetched_ts": 1793879087,
+  "fetched": "2026-11-05 05:47 CT",
+  "fetched_ts": 1793879250,
   "source": "hand-maintained macro_calendar.json"
  },
  "changes": [
   {
    "dir": "up",
-   "text": "BTC $80,273, +2.20% vs last report ($78,543)"
+   "text": "BTC $80,270, +2.20% vs last report ($78,543)"
   },
   {
    "dir": "flat",
@@ -1643,7 +1643,7 @@
   },
   {
    "dir": "up",
-   "text": "Total market cap +2.06%; BTC dominance +0.16 pts to 60.1%"
+   "text": "Total market cap +2.07%; BTC dominance +0.17 pts to 60.1%"
   },
   {
    "dir": "up",
