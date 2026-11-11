@@ -1,17 +1,17 @@
 {
  "date": "2026-11-10",
- "generated": "2026-11-10 20:38 CT",
- "generated_ts": 1794364701,
+ "generated": "2026-11-10 21:31 CT",
+ "generated_ts": 1794367888,
  "kind": "snapshot",
  "btc": {
-  "price": 73379.41,
-  "change_24h": -1.8505033913879587,
-  "change_7d": -8.764202555045596,
+  "price": 73657.92,
+  "change_24h": -1.0783516228053736,
+  "change_7d": -8.41791901383978,
   "high_24h": 74902.89,
   "low_24h": 72643.48,
-  "sma20": 77675.594,
-  "sma50": 81108.5462,
-  "sma200": 73113.398,
+  "sma20": 77691.545,
+  "sma50": 81114.9266,
+  "sma200": 73114.99309999999,
   "trend": "Downtrend",
   "supports": [
    63702.01,
@@ -1296,160 +1296,160 @@
     "open": 73697.88,
     "high": 73929.39,
     "low": 73110,
-    "close": 73333.64
+    "close": 73652.66
    }
   ],
   "status": "ok",
-  "fetched": "2026-11-10 20:38 CT",
-  "fetched_ts": 1794364701,
+  "fetched": "2026-11-10 21:31 CT",
+  "fetched_ts": 1794367889,
   "source": "Coinbase Exchange public API"
  },
  "market": {
-  "total_mcap": 2466827206000.804,
-  "mcap_change_24h": -4.7698787242526475,
-  "btc_dominance": 59.68730176603776,
-  "eth_dominance": 10.150027011900082,
+  "total_mcap": 2476044679386.041,
+  "mcap_change_24h": -4.058475226039746,
+  "btc_dominance": 59.71378564888099,
+  "eth_dominance": 10.14917847139983,
   "top10": [
    {
     "rank": 1,
     "mcap_rank": 1,
     "symbol": "BTC",
     "name": "Bitcoin",
-    "price": 73332,
-    "change_24h": -1.88665,
-    "change_7d": -4.6649,
-    "mcap": 1475174148475
+    "price": 73714,
+    "change_24h": -1.18425,
+    "change_7d": -4.3374,
+    "mcap": 1482358742070
    },
    {
     "rank": 2,
     "mcap_rank": 2,
     "symbol": "ETH",
     "name": "Ethereum",
-    "price": 2052.7,
-    "change_24h": -3.00408,
-    "change_7d": -9.674,
-    "mcap": 250925863456
+    "price": 2061.65,
+    "change_24h": -2.57598,
+    "change_7d": -9.0681,
+    "mcap": 251950552275
    },
    {
     "rank": 3,
     "mcap_rank": 4,
     "symbol": "BNB",
     "name": "BNB",
-    "price": 678.87,
-    "change_24h": -1.30649,
-    "change_7d": -2.1644,
-    "mcap": 89291558689
+    "price": 682.68,
+    "change_24h": -0.74923,
+    "change_7d": -1.6074,
+    "mcap": 89777785491
    },
    {
     "rank": 4,
     "mcap_rank": 6,
     "symbol": "XRP",
     "name": "XRP",
-    "price": 1.053,
-    "change_24h": -3.42114,
-    "change_7d": -16.4588,
-    "mcap": 66910211075
+    "price": 1.061,
+    "change_24h": -2.79784,
+    "change_7d": -15.6784,
+    "mcap": 67403564161
    },
    {
     "rank": 5,
     "mcap_rank": 7,
     "symbol": "SOL",
     "name": "Solana",
-    "price": 83.15,
-    "change_24h": -3.12107,
-    "change_7d": -9.964,
-    "mcap": 49185224923
+    "price": 83.55,
+    "change_24h": -2.4426,
+    "change_7d": -9.4406,
+    "mcap": 49417391831
    },
    {
     "rank": 6,
     "mcap_rank": 8,
     "symbol": "TRX",
     "name": "TRON",
-    "price": 0.317279,
-    "change_24h": 0.03374,
-    "change_7d": -1.4365,
-    "mcap": 30150222989
+    "price": 0.317269,
+    "change_24h": -0.06822,
+    "change_7d": -1.6621,
+    "mcap": 30144638703
    },
    {
     "rank": 7,
     "mcap_rank": 10,
     "symbol": "ZEC",
     "name": "Zcash",
-    "price": 1020.31,
-    "change_24h": -11.10128,
-    "change_7d": -16.1844,
-    "mcap": 17393726423
+    "price": 1033.14,
+    "change_24h": -9.81798,
+    "change_7d": -14.9731,
+    "mcap": 17595909937
    },
    {
     "rank": 8,
     "mcap_rank": 11,
     "symbol": "HYPE",
     "name": "Hyperliquid",
-    "price": 71.63,
-    "change_24h": -3.34988,
-    "change_7d": -14.3658,
-    "mcap": 17149529112
+    "price": 72.2,
+    "change_24h": -2.13543,
+    "change_7d": -13.2995,
+    "mcap": 17285287332
    },
    {
     "rank": 9,
     "mcap_rank": 12,
     "symbol": "DOGE",
     "name": "Dogecoin",
-    "price": 0.06829,
-    "change_24h": -1.93892,
-    "change_7d": -8.498,
-    "mcap": 10702143776
+    "price": 0.068433,
+    "change_24h": -1.67364,
+    "change_7d": -7.6308,
+    "mcap": 10722282078
    },
    {
     "rank": 10,
     "mcap_rank": 13,
     "symbol": "XMR",
     "name": "Monero",
-    "price": 560.51,
-    "change_24h": -3.62863,
-    "change_7d": -10.5101,
-    "mcap": 10550889136
+    "price": 565.83,
+    "change_24h": -0.54687,
+    "change_7d": -10.1892,
+    "mcap": 10654200632
    }
   ],
   "sector_leaders": [
    {
     "name": "The Boy\u2019s Club",
-    "change_24h": 4.491887462617497
+    "change_24h": 3.8088819426547778
    },
    {
     "name": "Frog-Themed",
-    "change_24h": 4.295423324221998
-   },
-   {
-    "name": "Layer 0 (L0)",
-    "change_24h": 2.5163906166897547
+    "change_24h": 3.623059614379952
    },
    {
     "name": "SocialFi",
-    "change_24h": 2.3130485488400567
+    "change_24h": 3.2830811947381724
+   },
+   {
+    "name": "Layer 0 (L0)",
+    "change_24h": 3.1912800999376745
    }
   ],
   "sector_laggards": [
    {
-    "name": "Quantum-Resistant",
-    "change_24h": -10.863287700676882
-   },
-   {
-    "name": "Zero Knowledge (ZK)",
-    "change_24h": -10.418643862711695
-   },
-   {
     "name": "Prediction Markets",
-    "change_24h": -10.255350067479126
+    "change_24h": -9.954307551666101
+   },
+   {
+    "name": "Quantum-Resistant",
+    "change_24h": -9.789983092602242
    },
    {
     "name": "Options",
-    "change_24h": -9.682998380617104
+    "change_24h": -9.421763180464522
+   },
+   {
+    "name": "Zero Knowledge (ZK)",
+    "change_24h": -9.393388351879011
    }
   ],
   "status": "ok",
-  "fetched": "2026-11-10 20:38 CT",
-  "fetched_ts": 1794364702,
+  "fetched": "2026-11-10 21:31 CT",
+  "fetched_ts": 1794367890,
   "source": "CoinGecko free API"
  },
  "derivatives": {
@@ -1462,19 +1462,19 @@
   "oi_scope": "OKX all BTC contracts, daily",
   "liq": {
    "long_usd": 715042.30856,
-   "short_usd": 67070.69470999998,
+   "short_usd": 299057.2231899999,
    "count": 100,
-   "since": "Nov 10 19:32 CT",
+   "since": "Nov 10 19:41 CT",
    "scope": "OKX BTC-USDT perp only, most recent liquidation orders the free API returns (partial sample, not market-wide)"
   },
   "status": "ok",
-  "fetched": "2026-11-10 20:38 CT",
-  "fetched_ts": 1794364705,
+  "fetched": "2026-11-10 21:31 CT",
+  "fetched_ts": 1794367891,
   "source": "OKX public API"
  },
  "flows": {
-  "stablecoin_supply": 291077306110.8,
-  "stablecoin_change_7d": -4714885060.200012,
+  "stablecoin_supply": 291078264635.44,
+  "stablecoin_change_7d": -4713926535.559998,
   "stablecoin_series": [
    {
     "time": 1791849600,
@@ -1594,7 +1594,7 @@
    },
    {
     "time": 1794355200,
-    "value": 291077306110.8
+    "value": 291078264635.44
    }
   ],
   "etf": {
@@ -1602,8 +1602,8 @@
    "reason": "No free, key-less, reliable source for daily spot BTC ETF flows (Farside blocks scraping; others need keys)."
   },
   "status": "ok",
-  "fetched": "2026-11-10 20:38 CT",
-  "fetched_ts": 1794364705,
+  "fetched": "2026-11-10 21:31 CT",
+  "fetched_ts": 1794367891,
   "source": "DefiLlama stablecoins API"
  },
  "fng": {
@@ -1612,8 +1612,8 @@
   "yesterday": 32,
   "week_ago": 34,
   "status": "ok",
-  "fetched": "2026-11-10 20:38 CT",
-  "fetched_ts": 1794364705,
+  "fetched": "2026-11-10 21:31 CT",
+  "fetched_ts": 1794367891,
   "source": "alternative.me"
  },
  "calendar": {
@@ -1628,18 +1628,18 @@
   ],
   "note": "Hand-maintained. date/time are ET as published; 'utc' is what the site displays (converted to viewer's local time). Add CPI/jobs dates from bls.gov/schedule; only confirmed dates belong here.",
   "status": "ok",
-  "fetched": "2026-11-10 20:38 CT",
-  "fetched_ts": 1794364705,
+  "fetched": "2026-11-10 21:31 CT",
+  "fetched_ts": 1794367891,
   "source": "hand-maintained macro_calendar.json"
  },
  "changes": [
   {
    "dir": "dn",
-   "text": "BTC $73,379, -1.42% vs last report ($74,437)"
+   "text": "BTC $73,658, -1.05% vs last report ($74,437)"
   },
   {
    "dir": "dn",
-   "text": "Total market cap -0.49%; BTC dominance -0.55 pts to 59.7%"
+   "text": "Total market cap -0.12%; BTC dominance -0.52 pts to 59.7%"
   },
   {
    "dir": "flat",
@@ -1647,7 +1647,7 @@
   },
   {
    "dir": "dn",
-   "text": "Stablecoin supply -$1,882M since last report"
+   "text": "Stablecoin supply -$1,881M since last report"
   }
  ],
  "compared_to": "2026-11-09"
